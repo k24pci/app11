@@ -1,0 +1,15 @@
+Homework 1: Implement method for calculating wage of an Employee
+            double calculateWage(double workingHoursPerMonth)
+Define an enum type Position(PROGRAMMER(value1), QA(2), PM(10))
+            1,2,10 - indicate pay per hours (payPerHour)
+(Nje metode, nje enum (hin si fushe te Employee)
+
+Homework 2: Rename(Refactor) create method to createOrUpdate in InMemoryDB
+
+Implement update() functionality for InMemoryDB
+            void update(Company company)  (ne MAP insert bohet me put, find bohet me get edhe update bohet me put)
+            (edhe metoda update ne InMemoryDB class ka me qene njejte sikur create edhe e bojme rename
+            create ne createOrUpdate)
+
+Homework 3: Implement remove functionality to be supported by InMemoryDB
+            void remove (Integer id)
