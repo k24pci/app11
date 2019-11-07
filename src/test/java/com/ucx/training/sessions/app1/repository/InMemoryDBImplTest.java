@@ -1,5 +1,6 @@
-package com.ucx.training.sessions.app1;
+package com.ucx.training.sessions.app1.repository;
 
+import com.ucx.training.sessions.app1.MockData;
 import com.ucx.training.sessions.app1.businesslogic.Company;
 import com.ucx.training.sessions.app1.repository.InMemoryDBImpl;
 import org.junit.Test;

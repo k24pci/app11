@@ -3,7 +3,10 @@ package com.ucx.training.sessions.app1;
 import com.ucx.training.sessions.app1.businesslogic.*;
 import com.ucx.training.sessions.app1.repository.InMemoryDB;
 
+import java.io.IOException;
 import java.util.*;
+
+import static com.ucx.training.sessions.app1.businesslogic.WageProcessor.calculateWages;
 
 public class Application {
     public static void main(String[] args) {
@@ -44,6 +47,18 @@ public class Application {
         for (WageResult wage : wages) {
             System.out.println("Employee Name: " + wage.getEmployee().getFirstName() + " and " + " Wage is: " + wage.getWage());
         }
+
+        List<WageResult> wageResults = null;
+        try {
+            wageResults = calculateWages("C:\\Users\\lenovo\\Desktop\\training\\remoteApp1\\app1\\src\\test\\java\\com\\ucx\\training\\sessions\\app1\\resources\\employeesInformation.csv");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        for (WageResult wr: wageResults){
+            System.out.println(wr.getEmployee().getFirstName() + " " + wr.getWage());
+        }
+
+
 
 
 //        List<String> names = new ArrayList<>();

@@ -1,9 +1,6 @@
 package com.ucx.training.sessions.app1;
 
-import com.ucx.training.sessions.app1.businesslogic.Address;
-import com.ucx.training.sessions.app1.businesslogic.Company;
-import com.ucx.training.sessions.app1.businesslogic.Employee;
-import com.ucx.training.sessions.app1.businesslogic.Gender;
+import com.ucx.training.sessions.app1.businesslogic.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,4 +30,19 @@ public class MockData {
 
         return company;
     }
+    public static Employee getEmployee(Position position){
+
+        Address address3 = new Address("Kosovo", "Kosovo", "Prishtina", "3st street", 10000);
+        Employee employee = new Employee();
+        employee.setFirstName("Mary");
+        employee.setLastName("Jones");
+        employee.setJobPosition(Position.PM);
+        employee.setGender(Gender.FEMALE);
+        employee.setAddress(address3);
+        employee.setWorkingHours(100D);
+
+        return  employee;
+    }
+
+
 }
